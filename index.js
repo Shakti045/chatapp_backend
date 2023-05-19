@@ -27,7 +27,7 @@ app.use("/api/v1",routes);
 const server=http.createServer(app);
 const io= new Server(server,{
     cors:{
-        origin:"http://localhost:3000",
+        origin:"https://shaktichatapp.netlify.app/",
         credentials:true
     }
 })
