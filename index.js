@@ -18,16 +18,16 @@ app.use(fileupload({
 }))
 app.use(cors());
 app.use("/api/v1",routes);
-app.listen(PORT,()=>{
-    console.log(`Server started on port number ${PORT}`);
-})
+// app.listen(PORT,()=>{
+//     console.log(`Server started on port number ${PORT}`);
+// })
 // app.get("/",(req,res)=>{
 //     res.send("Server ready he bhai")
 // })
 const server=http.createServer(app);
 const io= new Server(server,{
     cors:{
-        origin:"*",
+        origin:"http://localhost:3000",
         credentials:true
     }
 })
