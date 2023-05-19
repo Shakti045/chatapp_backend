@@ -27,7 +27,7 @@ app.use("/api/v1",routes);
 const server=http.createServer(app);
 const io= new Server(server,{
     cors:{
-        origin:"https://shaktichatapp.netlify.app/",
+        origin:"https://main--shaktichatapp.netlify.app/",
         credentials:true
     }
 })
@@ -59,6 +59,7 @@ io.on("connection",(socket)=>{
 server.listen(PORT,()=>{
     console.log(`Server started on port number ${PORT}`);
 })
+
 
 connectdb();
 connectcloudinary();
